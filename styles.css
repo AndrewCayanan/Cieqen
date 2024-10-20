@@ -1,0 +1,512 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Rosarssans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Header / Nav */
+header {
+    background-color: #000;
+    padding: 10px 0;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.cieqen {
+    text-decoration: none;
+    color: #f4f4f4;
+}
+
+.cieqen:hover {
+    color: #8b0000; 
+    border-bottom: 2px solid #8b0000; 
+}
+
+
+.logo {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* burger */
+
+/* Show menu */
+.show-menu {
+    top: 0;
+  }
+
+.shadow-header {
+    background-color: black;
+    box-shadow: 0 2px 16px hsla(40, 24%, 4%, .1);
+}
+
+.nav__toggle {
+    display: none;
+    cursor: pointer;
+    color: white;
+}
+
+.nav_menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide links by default on mobile */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute; /* Positioning for the dropdown effect */
+        top: 60px; /* Adjust based on your header height */
+        right: 0; /* Align to the right */
+        background-color: #000; /* Same background as header */
+        width: 200px; /* Fixed width for the menu */
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Shadow for dropdown */
+    }
+
+    .show-menu {
+        display: flex; /* Show the menu when toggled */
+        flex-direction: column;
+    }
+
+    .nav__toggle {
+        display: block; /* Show burger icon */
+    }
+}
+
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    margin: auto;
+    position: relative;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #8b0000;
+    border-bottom: 2px solid #8b0000; 
+}
+
+/* Main content section */
+.main-content {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+}
+
+.image-banner img {
+    max-width: 100%;
+    height: auto;
+}
+
+.content-text {
+    margin-top: 20px;
+}
+
+.content-text h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.content-text p {
+    font-size: 18px;
+    margin-top: 10px;
+    max-width: 800px;
+}
+
+/* Top wear section */
+.top-wear {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.top-wear h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.top-wear-items {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.top-wear .item {
+    text-align: center;
+}
+
+.top-wear .item img {
+    width: 70%;
+    height: auto;
+}
+
+.view-all {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.view-all:hover,
+.view-all a.active {
+    color: #8b0000; /* Match hover effect from the main navigation */
+    border-bottom: 2px solid #8b0000; /* Match the active state underline */
+    text-decoration: none;
+}
+
+/* Featured section */
+.featured {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.featured-items {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.featured-item {
+    text-align: center;
+    position: relative;
+}
+.featured-item img {
+    width: 70%;
+    height: auto;
+}
+
+.featured-item button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8%;
+}
+
+.featured-items button:hover{
+    color: #8b0000; /* Match hover effect from the main navigation */
+    border-bottom: 2px solid #8b0000; /* Match the active state underline */
+    text-decoration: none;
+}
+
+/* Contact section */
+.contact {
+    text-align: center;
+    padding: 40px;
+    background-color: #f4f4f4;
+}
+
+
+.contact button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 8%;
+}
+
+.order{
+    color: #f4f4f4; /* Match hover effect from the main navigation */
+    text-decoration: none;
+}
+
+.order:hover{
+    color: #8b0000; /* Match hover effect from the main navigation */
+    text-decoration: none;
+}
+
+button {
+    color: #f4f4f4; /* Match hover effect from the main navigation */
+}
+/* ABOUT US =============================*/
+
+.label {
+    width: auto;
+    height: auto;
+    margin: 50px;
+}
+
+.label .text-wrapper {
+    position: relative;
+    width: 402px;
+    margin-top: 50px;
+    left: 0;
+    margin-bottom: 50px;
+    font-family: "Rosarivo-Regular", Helvetica;
+    font-weight: 400;
+    text-transform: bold;
+    color: #000000;
+    font-size: 48px;
+    letter-spacing: 0;
+    line-height: 25px;
+    white-space: nowrap;
+    }
+
+.label .welcome-to-cieqen-at {
+    position: relative;
+    width: auto;
+    top: 0;
+    margin-left: 25px;
+    left: 0;
+    font-family: "Rosario-Regular", Helvetica;
+    font-weight: 40;
+    color: #000000;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: 40px;
+    flex-direction: column;
+}
+/* wardrobe ==================================== */
+
+.wardrobe2 {
+    background-image: url(images/bg2.png);
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    height: 100px; /* Set a height for the heading */
+    display: flex; /* Use flexbox for centering */
+    align-items: left; /* Vertically center the text */
+    justify-content: left; /* Horizontally center the text */
+    text-align: center; /* Center the text */
+    margin-top: 5px;
+}
+
+.wardrobe2 h2 {
+    padding-top: 40px;
+    text-align: left;
+    padding-left: 30px;
+    color: #000;
+}
+
+/* Products Section */
+.products {
+    display: flex; /* Use flexbox */
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: space-between; /* Space between items */
+    max-width: 1200px; /* Limit the width of the container */
+    margin: 20px auto; /* Center the container */
+    padding: 0 20px; /* Padding inside the container */
+}
+
+.product-item {
+    flex: 1 1 calc(50% - 20px); /* Allow two items per row with spacing */
+    margin: 10px; /* Space around each product */
+    text-align: center; /* Center text below images */
+}
+
+.product-item img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: rounded corners for images */
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .product-item {
+        flex: 1 1 calc(100% - 20px); /* One item per row on smaller screens */
+    }
+}
+
+
+
+/* Wardrobe Navigation Styling */
+.wardrobe-nav {
+    background-color: #1a1a1a; /* Match the main navigation background */
+    padding: 10px 0;
+    text-align: center;
+}
+
+.wardrobe-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around; /* Distribute items evenly */
+    width: 100%; /* Full width */
+}
+
+.wardrobe-links li {
+    flex: 1;
+    text-align: center;
+    margin: 0; /* Remove right margin */
+}
+
+.wardrobe-links a {
+    text-decoration: none;
+    color: white; /* Match the font color */
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    padding: 10px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.wardrobe-links a:hover,
+.wardrobe-links a.active {
+    color: #8b0000; /* Match hover effect from the main navigation */
+    border-bottom: 2px solid #8b0000; /* Match the active state underline */
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .wardrobe-links {
+        flex-direction: column; /* Stack items vertically on small screens */
+        text-align: center; /* Center text */
+    }
+
+    .wardrobe-links li {
+        margin: 10px 0; /* Space between items */
+    }
+}
+
+/* LOCATION ==================================== */
+
+.Locations {
+    background-image: url(images/bg2.png);
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    height: 100px; /* Set a height for the heading */
+    display: flex; /* Use flexbox for centering */
+    align-items: left; /* Vertically center the text */
+    justify-content: left; /* Horizontally center the text */
+    text-align: center; /* Center the text */
+    margin-top: 5px;
+}
+
+.Locations h2 {
+    padding-top: 40px;
+    text-align: left;
+    padding-left: 30px;
+    color: #000;
+}
+
+.map-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    text-align: left;
+}
+
+.map-section iframe {
+    width: 100%; /* Full width */
+    height: 450px; /* Set height */
+    border: 0; /* No border */
+}
+
+.map-section h2 {
+    margin-bottom: 20px; /* Space below the map title */
+}
+
+/* Footer section */
+
+footer {
+    background-color: #000; /* Dark background */
+    color: white; /* White text */
+    padding: 20px; /* Padding around the footer */
+    text-align: center; /* Center text */
+}
+
+.footer-content {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between sections */
+    align-items: flex-start; /* Align items to the start */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.footer-links {
+    display: flex; /* Display links in a row */
+    flex: 1; /* Allow it to grow */
+    justify-content: space-around; /* Space evenly */
+    margin-right: 20px; /* Space between links and social icons */
+}
+
+.footer-links div {
+    margin: 0 15px; /* Space between columns */
+}
+
+.footer-links h3 {
+    margin-bottom: 10px; /* Space below headings */
+}
+
+.footer-social {
+    flex: 0 0 200px; /* Fixed width for social links */
+    text-align: left; /* Align text to the left */
+}
+
+.footer-social p {
+    margin: 5px 0; /* Space between social links */
+}
+
+.footer-social a {
+    color: palegreen; /* Change link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.footer-social a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+footer p {
+    margin-top: 20px; /* Space above copyright notice */
+    font-size: 0.9em; /* Slightly smaller font */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center items */
+    }
+
+    .footer-links {
+        flex-direction: column; /* Stack link sections vertically */
+        margin-right: 0; /* Remove right margin */
+    }
+
+    .footer-links div {
+        margin: 10px 0; /* Adjust spacing for vertical layout */
+    }
+}
